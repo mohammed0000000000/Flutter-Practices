@@ -44,7 +44,8 @@ class Bmiscreen extends StatelessWidget {
                       )
                     ],
                   ),
-                )),
+                )
+                ),
                 SizedBox(width: 15)
                 ,
                 Expanded(child: Container(
@@ -116,35 +117,39 @@ class Bmiscreen extends StatelessWidget {
                       color: Colors.grey[500],
                       borderRadius: BorderRadius.circular(20)
                   ),
-                  padding: EdgeInsets.all(10),
                   child: Column(
                     children: [
-                      Expanded(child: Text(
+                      const Expanded(child: Text(
                         "Weight", style: TextStyle(fontSize: 45,
                           fontWeight: FontWeight.bold),)),
-                      Expanded(
+                      const Expanded(
                         child: Text("50", style: TextStyle(
                             fontSize: 45,
                             fontWeight: FontWeight.bold
                         ),
                         ),
                       ),
-                      Expanded(child: Row(
-                        children: [
-                          Expanded(child: TextButton(
-                              onPressed: () {},
-                              child: Icon(
-                                Icons.add, color: Colors.black, size: 40,))),
-                          Expanded(child: TextButton(
-                              onPressed: () {},
-                              child: Icon(Icons.minimize, color: Colors.black,
-                                size: 40,)))
-                        ],
+                      Expanded(child: Container(
+                        padding: const EdgeInsets.all(15),
+                        child: Row(
+                          children: [
+                            Expanded(child: CircleAvatar(
+                              radius: 50,
+                              backgroundColor: Colors.blueGrey[600],
+                              child: const Icon(Icons.remove,size: 40,color: Colors.black,),
+                            )),
+                            Expanded(child:CircleAvatar(
+                              radius: 50,
+                              backgroundColor: Colors.blueGrey[600],
+                              child: const Icon(Icons.add,size: 40,color: Colors.black,),
+                            ))
+                          ],
+                        ),
                       ))
                     ],
                   ),
                 )),
-                SizedBox(width: 15),
+                const SizedBox(width: 15),
                 Expanded(child: Container(
                   decoration: BoxDecoration(
                       color: Colors.grey[500],
@@ -152,11 +157,11 @@ class Bmiscreen extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Expanded(child: Text("Age", style: TextStyle(
+                      const Expanded(child: Text("Age", style: TextStyle(
                           fontSize: 45,
                           fontWeight: FontWeight.bold
                       ),)),
-                      Expanded(
+                      const Expanded(
                         child: Text("18", style: TextStyle(
                             fontSize: 45,
                             fontWeight: FontWeight.bold
@@ -164,25 +169,20 @@ class Bmiscreen extends StatelessWidget {
                         ),
                       ),
                       Expanded(child: Container(
-                        padding: EdgeInsets.all(15),
+                        padding: const EdgeInsets.all(15),
                         child: Row(
                           children: [
-                            Expanded(child: Container(
-                              decoration: BoxDecoration(
-                                color: Colors.blueGrey,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                              child: TextButton(
-                                onPressed: () {},
-                                child: Icon(
-                                  Icons.add, color: Colors.black, size: 40,),
-                              ),
+                            Expanded(child: CircleAvatar(
+                              radius: 50,
+                              backgroundColor: Colors.blueGrey[600],
+                              child: const Icon(Icons.remove,size: 40,color: Colors.black,),
+                            )
                             ),
-                            ),
-                            Expanded(child: TextButton(
-                                onPressed: () {},
-                                child: Icon(Icons.minimize, color: Colors.black,
-                                  size: 40,)))
+                            Expanded(child: CircleAvatar(
+                              radius: 50,
+                              backgroundColor: Colors.blueGrey[600],
+                              child: const Icon(Icons.add,size: 40,color: Colors.black,),
+                            ))
                           ],
                         ),
                       ))
@@ -191,7 +191,7 @@ class Bmiscreen extends StatelessWidget {
                 ))
               ],
             )),
-            SizedBox(height: 15),
+            const SizedBox(height: 15),
             ElevatedButton(onPressed: () {},
               style: ElevatedButton.styleFrom(backgroundColor:
               Colors.blueGrey[600]), child: Container(
